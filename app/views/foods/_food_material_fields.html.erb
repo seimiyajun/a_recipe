@@ -1,0 +1,12 @@
+    <div class="form-horizontal memo_field">
+      <div class="col-lg-10">
+        <%= f.collection_select :material_id, Material.all, :id, :name, include_blank: true, class: 'form-control' %>
+        <%= f.hidden_field :food_id, value: @food.id %>
+      </div>
+      
+      <%= link_to_remove_association f, { wrapper_class: 'memo_field' } do %>
+        <%= fa_icon 'times-circle', class: 'memo_field_close_button' %>
+      <% end %>
+      
+      <%= f.error_span(:material_id) %>
+    </div>

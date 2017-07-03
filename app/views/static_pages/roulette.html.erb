@@ -1,0 +1,6 @@
+<%= form_tag(static_pages_post_path, method: :post) do %>
+  <%= select_tag :materials_id, options_for_select( @materials ), include_blank: true %>
+  <%= submit_tag "Roulette!" %>
+<% end %>
+<%= link_to 'Back', root_path %>
+
